@@ -39,7 +39,7 @@ import { Observable, filter, firstValueFrom, interval, switchMap, tap } from 'rx
 import { authCodeFlowConfig } from './auth.config';
 import { OAuthModule, OAuthService } from 'angular-oauth2-oidc';
 import { authPasswordFlowConfig } from './auth-password-flow-login';
-// import { TokenInterceptor } from './TokenInterceptor';
+import { TokenInterceptor } from './TokenInterceptor';
 
 //Mehtod for Local Testing
 
