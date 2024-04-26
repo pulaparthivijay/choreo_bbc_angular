@@ -5,7 +5,7 @@ export const authPasswordFlowConfig: AuthConfig = {
     issuer:  'https://api.asgardeo.io/t/orgenox1/oauth2/token',
   
     // URL of the SPA to redirect the user to after login
-    redirectUri: 'http://localhost:4200/dashboard',
+    redirectUri: 'https://b9eb8320-92a5-4ca3-aab7-1e86706546a4.e1-us-east-azure.choreoapps.dev/dashboard',
   
     // URL of the SPA to redirect the user after silent refresh
     //silentRefreshRedirectUri: 'http://localhost:4200/dashboard',
@@ -21,7 +21,7 @@ export const authPasswordFlowConfig: AuthConfig = {
   
     showDebugInformation: true,
     logoutUrl: 'https://api.asgardeo.io/t/orgenox1/oidc/logout',
-    postLogoutRedirectUri:'http://localhost:4200/dashboard',
+    postLogoutRedirectUri:'https://b9eb8320-92a5-4ca3-aab7-1e86706546a4.e1-us-east-azure.choreoapps.dev/dashboard',
     oidc: false,
     //responseType: 'code',
     strictDiscoveryDocumentValidation:false,
