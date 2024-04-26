@@ -71,7 +71,7 @@ export class InventoryService {
   carBuyByBuyer(id: any) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'buyerUser_id': this.userId,
+      'userId': this.userId,
       
     });
     const options = { headers: headers };
