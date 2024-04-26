@@ -1,0 +1,113 @@
+<div *ngIf="isLoading">
+  <app-progress-loader></app-progress-loader>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 image-section mt-5">
+
+          <carousel [itemsPerSlide]=1 [singleSlideOffset]=true [interval]="3000" animate="true" transition="slide"
+            style="width:100%;height:200px;" [showIndicators]=false>
+            <slide *ngFor="let img1 of imgArr2; let index=index">
+              <img [src]="img1" alt="image slide" style="display: block; width: 100%;height:200px;">
+            </slide>
+          </carousel>
+
+        </div>
+
+        <div class="col-sm-12 weather-section mt-3 d-flex align-items-center">
+
+          <div class="col-sm-4 d-flex align-items-center">
+            <img [src]="weatherImage" style="height: 75px;width: 75px;" >
+            <h2 class="text-color">{{current_temp}}℃</h2>
+          </div>
+          <div >
+            <h4 class="m-0 text-color">{{condition}}</h4>
+            <p class="text-color">Feels like {{feelslike_c}}℃</p>
+          </div>
+        </div>
+        <div class="col-sm-12 dashboard-details-cont mt-5 row-gap-3 d-md-flex flex-wrap">
+
+          <div class="col-sm-12 col-md-4 d-flex justify-content-center" (click)="goToFavVehicle(showUserCard?.id)">
+            <div class="dashboard-details d-flex">
+              <div class="icon-bg icon-bg1 col-sm-3">
+                <mat-icon>favorite</mat-icon>
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="format_paint"></mat-icon> -->
+              </div>
+              <div class="content col-sm-9">
+                <h4>favorite Vehicles</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 d-flex justify-content-center" (click)="userProfile()"  >
+            <div class="d-flex dashboard-details">
+              <div class="icon-bg icon-bg5 col-sm-3">
+                <mat-icon>person_search</mat-icon>
+              </div>
+              <div class="content col-sm-9">
+                <h4>User Profile</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-12 col-md-4 d-flex justify-content-center" (click)="logout()" >
+            <div class="d-flex dashboard-details">
+              <div class="icon-bg icon-bg7 col-sm-3">
+                <mat-icon>logout</mat-icon>
+              </div>
+              <div class="content col-sm-9">
+                <h4>Sign out</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-3 mt-5 profile-section">
+      <div class="col-sm-12 d-flex justify-content-center mt-4">
+        <div class="image-border">
+          <img mat-card-image *ngIf="(showUserCard?.profilePicture)!=null; else defaultImage"
+            [src]="baseUrl+showUserCard?.profilePicture" alt="{{showUserCard?.firstName}}" class="left-image"
+            width="100%">
+
+          <ng-template #defaultImage>
+            <img mat-card-image src="../../assets/images/blankProfilePic.webp" alt="{{showUserCard?.firstName}}"
+              class="left-image" width="100%">
+          </ng-template>
+        </div>
+        
+      </div>
+      <hr />
+      <div class="row">
+        
+        <div class="d-flex col-sm-12 content-overflow">
+          <h4 class="col-sm-4">Name</h4>
+          <h4 class="col-sm-8 text-bold">{{showUserCard?.first_name + " "+showUserCard?.last_name }}</h4>
+        </div>
+        <div class="d-flex col-sm-12 content-overflow">
+          <h4 class="col-sm-4">E-mail</h4>
+          <h4 class="col-sm-8 text-bold">{{showUserCard?.email}}</h4>
+        </div>
+        <div class="d-flex col-sm-12 content-overflow">
+          <h4 class="col-sm-4">UserName</h4>
+          <h4 class="col-sm-8 text-bold">{{showUserCard?.username}}</h4>
+        </div>
+        <div class="d-flex col-sm-12">
+          <h4 class="col-sm-4">Cell Phone</h4>
+          <h4 class="col-sm-8 text-bold">{{showUserCard?.phone}}</h4>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
