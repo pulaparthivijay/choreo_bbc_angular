@@ -193,11 +193,11 @@ function initializeAppFactory(httpClient: UserService, oauthService: OAuthServic
 
   providers: [DatePipe,
     { provide: APP_INITIALIZER, useFactory: initializeAppFactory, deps: [UserService, OAuthService], multi: true },
-    // {
-    //   // provide: HTTP_INTERCEPTORS,
-    //   // useClass: TokenInterceptor,
-    //   // multi: true
-    // },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
     AbilityService,
   ],
   bootstrap: [AppComponent],
