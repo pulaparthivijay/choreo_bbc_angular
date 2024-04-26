@@ -9,9 +9,9 @@ export class AuthServiceService {
   constructor(private http: HttpClient) {}
 
   getToken(): Observable<string> {
-    const url = 'https://api.asgardeo.io/t/vijaytech/oauth2/token';
+    const url = 'https://api.asgardeo.io/t/yudhistertech/oauth2/token';
     const headers = {
-      Authorization: 'Basic SFlVT3NRWGpJZlhWMjlWSVZ1RDJORjhma2VzYTpCa2pWZGRnaGV4V0t4aU93RjY3TzRSNXQ2ZWxwQ1AzOGpLZlJHXzVsQUdVYQ==',
+      Authorization: 'Basic dkNnd1owR3VNRXp0OXF3ZkRPMjVZT0RwTFNFYTpNamhlNnhVX0NZa3BlY3VpeVdwdVFJdll1OHlHMWRraENzWExteFV3cUVRYQ==',
       'Content-Type': 'application/x-www-form-urlencoded'
     };
     const body = 'grant_type=client_credentials';
