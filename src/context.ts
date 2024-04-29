@@ -38,10 +38,10 @@ declare global {
 //   export const apiUrl = window?.configs?.apiUrl ? window.configs.apiUrl : "/choreo-apis/bigbillioncars/reading-list-service/books-rest-endpoint-d70/v1.0";
 
   const inv= window?.configs?.apiUrl ? window.configs.apiUrlInv :"/choreo-apis/choreo-project/bbcballerina/inventory-a4c/v1.0";
-  const config= window?.configs?.apiUrl ? window.configs.apiUrlConfig :"/choreo-apis/choreo-project/bbcballerina/configcodes-631/v1.0";
+  const config= window?.configs?.apiUrl ? window.configs.apiUrlConfig :"https://c463bb48-bb66-4f3e-a60b-afc6455e9a25-prod.e1-us-east-azure.choreoapis.dev/choreo-project/bbcballerina/configcodes-631/v1.0";
   const shipment= window?.configs?.apiUrl ? window.configs.apiUrlShipment :"/choreo-apis/choreo-project/bbcballerina/shipment-ec9/v1.0";
-  const user= window?.configs?.apiUrl ? window.configs.apiUrlUser :"/choreo-apis/choreo-project/bbcballerina/user-27c/v1.0";
-  const appraisal= window?.configs?.apiUrl ? window.configs.apiUrlAppraisal :"/choreo-apis/choreo-project/bbcballerina/appraisal-a0e/v1.0";
+  const user= window?.configs?.apiUrl ? window.configs.apiUrlUser :"https://c463bb48-bb66-4f3e-a60b-afc6455e9a25-prod.e1-us-east-azure.choreoapis.dev/choreo-project/bbcballerina/user-27c/v1.0";
+  const appraisal= window?.configs?.apiUrl ? window.configs.apiUrlAppraisal :"https://c463bb48-bb66-4f3e-a60b-afc6455e9a25-prod.e1-us-east-azure.choreoapis.dev/choreo-project/bbcballerina/appraisal-a0e/v1.0";
   const dashboard= window?.configs?.apiUrl ? window.configs.apiUrlDashboard :"/choreo-apis/choreo-project/bbcballerina/dash-ecb/v1.0";
   const srchFtry= window?.configs?.apiUrl ? window.configs.apiUrlSrchFtry :"/choreo-apis/choreo-project/bbcballerina/searchfactory-008/v1.0";                                                                        
 
