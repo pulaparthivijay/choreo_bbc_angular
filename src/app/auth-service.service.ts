@@ -11,7 +11,7 @@ export class AuthServiceService {
   getToken(): Observable<string> {
     const url = 'https://api.asgardeo.io/t/yudhistertech/oauth2/token';
     const headers = {
-      Authorization: 'Basic U1A2M2pEdFM0Q1BDMUNMWWNWdlFjQ19md1N3YTpfZk9yY0hXMHNDUDM4T3lXVzhPbHd0dFlhRWIxYjJXOVZDa2tycnRMNFJBYQ==',
+      Authorization: 'Basic MEVMMnVCUGl4dk5QS2pSVTRxSVBBeEdXQ3pjYTpTUHoxc1JTUlN4bWdkNDVkZ0hDbGtteGs4STRGOVV3RFpvdUdlTmZNM2pNYQ==',
       'Content-Type': 'application/x-www-form-urlencoded'
     };
     const body = 'grant_type=client_credentials';
