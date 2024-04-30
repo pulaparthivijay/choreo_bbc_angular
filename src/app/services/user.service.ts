@@ -106,7 +106,7 @@ export class UserService {
     https://api.asgardeo.io/t/yudhistertech/oauth2/token?grant_type=client_credentials&scope=internal_user_mgt_view`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': "Basic U1A2M2pEdFM0Q1BDMUNMWWNWdlFjQ19md1N3YTpfZk9yY0hXMHNDUDM4T3lXVzhPbHd0dFlhRWIxYjJXOVZDa2tycnRMNFJBYQ==",
+      'Authorization': "Basic RzdTQU9HOHBFZmRMVjk1M3R3QkdwSlhJTG1FYTpDMkI1X0tFTE42U0xJdmpnbmZkYkMzSmhNNEV1c1RYckpXRGNtTkd1TlNrYQ==",
     });
     const options = { headers: headers };
     return this.http.post(accessTokenUrl, null, options);
