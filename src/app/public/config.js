@@ -5,5 +5,6 @@ window.configs = {
     apiUrlShipment:'/choreo-apis/beuc/ballerinafinal/shipment-ec9/v1.0',
     apiUrlSrchFtry:'/choreo-apis/beuc/ballerinafinal/searchfactory-008/v1.0',
     apiUrlAppraisal:'/choreo-apis/beuc/ballerinafinal/appraisal-a0e/v1.0',
-    apiUrlDashboard:'/choreo-apis/beuc/ballerinafinal/dash-ecb/v1.0'
+    apiUrlDashboard:'/choreo-apis/beuc/ballerinafinal/dash-ecb/v1.0',
+    apiUrlPetStore :'/choreo-apis/beuc/api/v3/v1.0/pet/findByStatus?status=available'
     }
