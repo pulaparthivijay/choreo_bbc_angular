@@ -28,7 +28,15 @@ export class DashboardComponent implements OnInit {
   constructor(private oauthservice: OAuthService,
     private router: Router, private http: HttpClient, private route: ActivatedRoute, private snackBar: MatSnackBar, public dialog: MatDialog, private DashboardService: DashboardService, private userService: UserService) {
 
+DashboardService.thirdPartyPetStore().subscribe({
+  next:(res:any)=>{
+    console.log(res);
+    
 
+  },
+  error:(e)=>{console.log(e);
+  }
+})
 
   }
 
@@ -172,4 +180,6 @@ export class DashboardComponent implements OnInit {
 function accessToken() {
   throw new Error('Function not implemented.');
 }
+
+
 

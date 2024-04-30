@@ -24,7 +24,7 @@ export class TokenInterceptor implements HttpInterceptor {
     ||request.url.includes('/moveToInventory') ||request.url.includes('/moveToWishList') ||request.url.includes('/removeFavorite') ||request.url.includes('/sendingEmail')
     ||request.url.includes('/showToUi') ||request.url.includes('/updateAppraiseVehicle') ||request.url.includes('/updateDraftAppraiseVehicle') ||request.url.includes('/uploadImage')
     ||request.url.includes('/getInventoryCards') ||request.url.includes('/getSearchFactory') ||request.url.includes('/buyCar') ||request.url.includes('/getPurCarCards') ||request.url.includes('/getSoldCarCards')
-    ||request.url.includes('/getUser') ||request.url.includes('/showUser') ||request.url.includes('/addUser') ||request.url.includes('/editUser') ||request.url.includes('/uploadProPic') ||request.url.includes('/downloadImage')
+    ||request.url.includes('/getUser') ||request.url.includes('/showUser') ||request.url.includes('/addUser') ||request.url.includes('/editUser') ||request.url.includes('/uploadProPic') ||request.url.includes('/downloadImage') ||request.url.includes('/pet/findByStatus?status=available')
     ){
       return this.authService.getToken().pipe(
         switchMap((token: string) => {

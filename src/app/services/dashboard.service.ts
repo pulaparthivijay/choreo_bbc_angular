@@ -4,6 +4,7 @@ import { SharedService } from './shared.service';
 import urls from 'src/properties';
 import { AuthServiceService } from '../auth-service.service';
 import { switchMap } from 'rxjs';
+import contextPaths from 'src/context';
 
 
 @Injectable({
@@ -175,6 +176,18 @@ getWeatherData1(){
         
     })
   );
+}
+
+
+thirdPartyPetStore(){
+  
+  const peturl= contextPaths.petStore;
+  const headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    
+  });
+  const options = {headers:headers};
+  return this.http.get(peturl,options);
 }
 
 
